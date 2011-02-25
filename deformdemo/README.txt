@@ -7,34 +7,14 @@ generation package.
 Running the Demo
 ----------------
 
-- Create a virtualenv::
+- Run buildout::
 
-    $ virtualenv2.6 --no-site-packages /path/to/my/venv
+    $ python bootstrap.py
+    $ bin/buildout
 
-  Hereafter ``/path/to/my/venv`` will be referred to as $VENV in steps
-  below.
+- Fire up the instance::
 
-- Install ``Pyramid``, ``pygments`` and ``Babel`` into your
-  virtualenv using ``easy_install``::
-
-    $ $VENV/bin/easy_install Pyramid pygments Babel
-
-- Get a checkout of deform::
-
-    $ git clone git://github.com/Pylons/deform.git
-
-- ``cd`` to the newly checked out deform package::
-
-    $ cd deform
-
-- Run ``setup.py develop`` using the virtualenv's ``python`` command::
-
-    $ $VENV/bin/python setup.py develop
-
-- While your working directory is still ``deform``, start the demo
-  application::
-
-    $ $VENV/bin/paster serve deformdemo/demo.ini
+    $ bin/paster serve demo.ini
 
 - Visit http://localhost:8521 in a browser to see the demo.
 
