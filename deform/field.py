@@ -133,7 +133,7 @@ class Field(object):
         self.__dict__.update(kw)
         for child in self.schema.children:
             self.children.append(self._create_child(child, **kw))
-            
+
     def _create_child(self, schema, **kw):
         """
         Creates a child field for the given schema
